@@ -33,6 +33,7 @@ public class AuthPath {
         $("button.button").click();
         $(".notification__content").shouldHave(Condition.exactText("Ошибка! Неверно указан логин или пароль")).shouldBe(Condition.visible);
     }
+
     @Test
     void shouldErrorIfUserRegisteredButPasswordIncorrect() {
         var registeredUser = getRegisteredUser("active");
@@ -61,5 +62,4 @@ public class AuthPath {
         $("button.button").click();
         $(".notification__content").shouldHave(Condition.exactText("Ошибка! Пользователь заблокирован")).shouldBe(Condition.visible);
     }
-
 }
